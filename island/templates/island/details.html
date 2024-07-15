@@ -1,0 +1,431 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Healthy Island</title>
+    <meta name="description" content="">
+    <link rel="icon" href="favicon.ico" type="images/ico" sizes="16x16">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="{% static 'island\css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/lity.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/slicknav.min.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css\style.css' %}">
+    <!--[if lt IE 9]>
+    <script src="js/modernizr-3.5.0.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- ====== scroll to top ====== -->
+    <a id="toTopBtn" title="Go to top" href="javascript:void(0)">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+    <!-- loader  -->
+    <div class="loader">
+        <h1>Loading...</h1>
+        <div id="cooking">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div id="area">
+                <div id="sides">
+                    <div id="pan"></div>
+                    <div id="handle"></div>
+                </div>
+                <div id="pancake">
+                    <div id="pastry"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- loader ends  -->
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="menubar">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav class="navbar navbar-static-top">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                <script>
+                    function loadGoogleTranslate() {
+                        new google.translate.TranslateElement(
+                            {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 
+                            'google_element'
+                        );
+                    }
+            
+                    // Wait for the Google Translate widget to load
+                    window.addEventListener('load', loadGoogleTranslate);
+                </script>
+        
+    <div id="google_element" style="position:relative;left:70vw;top:-2  vh">Language</div>
+                                    <a class="navbar-brand"  href="{% url 'home'  %}">
+                                        <img style="height:200px;" src="{% static 'island\images/aziz.png' %}" class="img-responsive" alt="logo">
+                                    </a>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse ">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="res-btn">
+                                            <a href="{% url 'reservation'  %}" class="book-btn">Book a table</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav navbar-nav navbar-right" id="main-menu">
+                                        <li class="active">
+                                            <a href="{% url 'reservation'  %}">
+                                                Home
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'about'  %}">About</a>
+                                        </li>
+                                       
+                                                <li>
+                                                    <a href="{% url 'menu'  %}"> menu</a>
+                                                </li>
+                                                
+
+                                           
+
+                                        
+
+
+                                    </ul>
+
+                                </div>
+                                <!-- /.navbar-collapse -->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mobile-menu" data-logo="images/logo.png">
+
+
+            </div>
+        </header>
+        <section class="page-title">
+            <div class="container">
+                <h2 class="title">
+                    Food Detail
+                </h2>
+                <ul class="brdcrumb clearfix">
+                    <li>
+                        <a href="{% url 'home'  %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'menu'  %}">Menu</a>
+                    </li>
+                    <li class="current">
+                        Food Details
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="page-section foods-details-bg food-details  section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <!-- food mega slider  -->
+                        <div class="food-slider owl-carousel">
+                            <div class="item">
+                                <img src="{{plat.image1.url}}" alt="food pic">
+                            </div>
+                            <div class="item">
+                                <img src="{{plat.image2.url}}" alt="food pic">
+                            </div>
+                            <div class="item">
+                                <img src="{{plat.image3.url}}" alt="food pic">
+                            </div>
+                            <div class="item">
+                                <img src="{{plat.image4.url}}" alt="food pic">
+                            </div>
+                        </div>
+                        <!-- food mega slider ends  -->
+                        <!-- food thumb slider sync -->
+                        <div class="food-thumb-slider-container">
+                            <div class="thumb-slider-inner">
+                                <div class="food-thumb-slider owl-carousel">
+                                    <div class="item">
+                                        <img src="{{plat.image1.url}}" alt="food pic">
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{plat.image2.url}}" alt="food pic">
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{plat.image3.url}}" alt="food pic">
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{plat.image4.url}}" alt="food pic">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- food thumb slider ends -->
+                        <!-- description -->
+                        <div class="row">
+                            <div class="col-xs-11 col-sm-8 col-md-5">
+                                <h3 class="main-title text-left">
+                                    <span>
+                                        Description
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>
+                                {{plat.description}}
+                            </p>
+                        </div>
+                        <!-- description ends -->
+
+                        <div class="row">
+                            <div class="col-xs-11 col-sm-8 col-md-6">
+                                <h3 class="main-title text-left">
+                                    <span>
+                                        You May Also Like
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <!-- dish slider  -->
+                        <div class="dish-slider testy-slider   owl-carousel" data-items="2" data-margin="20" data-loop="true" data-smart-speed="400"
+                             data-dots="true" data-nav="false" data-r-x-small="1" data-r-x-small-nav="false" data-r-x-small-dots="true"
+                             data-r-x-medium="2" data-r-x-medium-nav="false" data-r-x-medium-dots="true" data-r-small="2" data-r-small-nav="false"
+                             data-r-small-dots="true" data-r-medium="3" data-r-medium-nav="false" data-r-medium-dots="true" data-r-large="4"
+                             data-r-large-nav="false" data-r-large-dots="true">
+                            <div class="item">
+                                <a href="food-detail.html">
+                                    <img src="{% static 'island\images/chefs/dish1.jpg' %}" alt="special dish">
+
+                                    <span>chinese Food</span>
+                                </a>
+
+                            </div>
+                            <div class="item">
+                                <a href="food-detail.html">
+                                    <img src="{% static 'island\images/chefs/dish2.jpg' %}" alt="special dish">
+                                    <span>Grilled Sandwich</span>
+                                </a>
+
+                            </div>
+                            <div class="item">
+                                <a href="food-detail.html">
+                                    <img src="{% static 'island\images//chefs/dish3.jpg' %}" alt="special dish">
+                                    <span>vegetables mix</span>
+                                </a>
+
+                            </div>
+                            <div class="item">
+                                <a href="food-detail.html">
+                                    <img src="{% static 'island\images/chefs/dish3.jpg' %}" alt="special dish">
+                                    <span>chinese Food</span>
+                                </a>
+
+                            </div>
+                            <div class="item">
+                                <a href="food-detail.html">
+                                    <img src="{% static 'island\images/chefs/dish2.jpg' %}" alt="special dish">
+                                    <span>Grilled Sandwich</span>
+                                </a>
+
+                            </div>
+                            <div class="item">
+                                <a href="food-detail.html">
+                                    <img src="{% static 'island\images/chefs/dish1.jpg' %}" alt="special dish">
+
+                                    <span>chinese Food</span>
+                                </a>
+
+                            </div>
+                            <div class="item">
+                                <a href="food-detail.html">
+                                    <img src="{% static 'island\images/chefs/dish3.jpg' %}" alt="special dish">
+                                    <span>vegetables mix</span>
+                                </a>
+
+                            </div>
+                            <div class="item">
+                                <a href="food-detail.html">
+                                    <img src="{% static 'island\images/chefs/dish1.jpg' %}" alt="special dish">
+                                    <span>chinese Food</span>
+                                </a>
+
+                            </div>
+                            <div class="item">
+                                <a href="food-detail.html">
+                                    <img src="{% static 'island\images/chefs/dish3.jpg' %}" alt="special dish">
+                                    <span>vegetables mix</span>
+                                </a>
+
+                            </div>
+                            <div class="item">
+                                <a href="food-detail.html">
+                                    <img src="{% static 'island\images//chefs/dish1.jpg' %}" alt="special dish">
+                                    <span>chinese Food</span>
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- dish slider ends -->
+                    </div>
+                    <div class="col-md-4">
+                        <!-- food card  -->
+                        <div class="food-card">
+                            <h3 class="title">{{plat.name}}</h3>
+
+                            <ul class="details clearfix">
+                                <li>
+                                    Serve :
+                                    <span>{{plat.serve}}</span>
+                                </li>
+                               
+
+                                <li>
+                                    Calories :
+                                    <span>{{plat.Calories}} calories </span>
+                                </li>
+                                
+                            </ul>
+
+
+                            <p class="text-hard">Ingridients</p>
+                            <ul class="food-list">
+
+                                {{plat.ingridients}}
+                            </ul>
+                        </br>
+                            <p>
+                                {{plat.bio}}
+                            </p>
+                        </div>
+                        <!-- food card ends -->
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- our chefs section ends -->
+        <!-- call out section  -->
+        <section class="call-out-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2>Experience the real taste of our food.</h2>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="call-out-btn">
+                            <a href="contact.html" class="btn-custom">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- call out section ends -->
+        <!-- footer  -->
+        <footer class="footer section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="footer-widget">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="position:relative;left:22vw;">
+                                    <h3 class="main-title footer-title text-right">
+                                        <span>
+                                            Contact Us
+                                        </span>
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="content" style="position:relative;left:25vw;width:50vw;" >
+                                <p>
+                                    <i class="fa fa-map-marker"> </i>
+                                    <span>ADDRESS :</span>Rue pologne, Tunisia
+                                </p>
+                                <p>
+                                    <i class="fa fa-phone"> </i>
+                                    <span>CALL US :</span>+123-456-7890, +987-654-3210
+                                </p>
+                                <p>
+                                    <i class="fa fa-envelope-o"> </i>
+                                    <span>EMAIL US :</span>taste@tastybite.com
+                                </p>
+                                <h5>Follow us on :</h5>
+                                <ul class="mini-social">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+        </footer>
+        <!-- footer ends -->
+
+        <div class="copyright">
+
+            <p>
+                © Copyright | TastyBite 2018. All Right Reserved Developed By
+                <a href="#">Chouchene Med amine</a>
+            </p>
+        </div>
+    </div>
+    <script src="{% static 'island\js/jquery.1.12.4.js' %}"></script>
+    <script src="{% static 'island\js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'island\js/plugins.js' %}"></script>
+    <script src="{% static 'island\js/main.js' %}"></script>
+</body>
+
+</html>

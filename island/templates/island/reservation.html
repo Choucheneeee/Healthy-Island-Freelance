@@ -1,0 +1,491 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Healthy Island</title>
+    <meta name="description" content="">
+    <link rel="icon" href="favicon.ico" type="images/ico" sizes="16x16">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="{% static 'island\css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/lity.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/slicknav.min.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'island\css\style.css' %}">
+    <!--[if lt IE 9]>
+    <script src="js/modernizr-3.5.0.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- ====== scroll to top ====== -->
+    <a id="toTopBtn" title="Go to top" href="javascript:void(0)">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+    <!-- loader  -->
+    <div class="loader">
+        <h1>Loading...</h1>
+        <div id="cooking">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div id="area">
+                <div id="sides">
+                    <div id="pan"></div>
+                    <div id="handle"></div>
+                </div>
+                <div id="pancake">
+                    <div id="pastry"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- loader ends  -->
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="menubar">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav class="navbar navbar-static-top">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                <script>
+                    function loadGoogleTranslate() {
+                        new google.translate.TranslateElement(
+                            {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 
+                            'google_element'
+                        );
+                    }
+            
+                    // Wait for the Google Translate widget to load
+                    window.addEventListener('load', loadGoogleTranslate);
+                </script>
+        
+    <div id="google_element" style="position:relative;left:70vw;top:-2  vh">Language</div>
+                                    <a class="navbar-brand" href="{% url 'home'  %}">
+                                        <img style="height:200px;" src="{% static 'island\images/aziz.png' %}" class="img-responsive" alt="logo">
+                                    </a>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse ">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="res-btn">
+                                            <a href="{% url 'reservation'  %}" class="book-btn">Book a table</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav navbar-nav navbar-right" id="main-menu">
+                                        <li class="actives">
+                                            <a href="{% url 'home'  %}">
+                                                Home
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'about'  %}">About</a>
+                                        </li>
+                                       
+                                                <li>
+                                                    <a href="{% url 'menu'  %}"> menu</a>
+                                                </li>
+                                                
+
+                                           
+
+                                      
+
+                                    </ul>
+
+                                </div>
+                                <!-- /.navbar-collapse -->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mobile-menu" data-logo="images/logo.png">
+
+
+            </div>
+        </header>
+        <section class="page-title">
+            <div class="container">
+                <h2 class="title">
+                    Book Table
+                </h2>
+                <ul class="brdcrumb clearfix">
+                    <li>
+                        <a href="{% url 'home'  %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about'  %}">About</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'menu'  %}"> Food Menu</a>
+                    </li>
+                    <li class="current">
+                        Book Table
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- service section  -->
+        <!-- reservation section -->
+        <section class="reservation-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h2 class="main-title text-left">
+                                    <span>Reserve Now
+                                        
+                                    </span>
+                                    
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div>
+                                {% if message %}
+                                <p style="color:#ffad18;font-family: Helvetica, Arial, sans-serif;">
+                                    {{message}}
+                                </p>
+                                {%  else  %}
+                                <p style="color:red;font-family: Helvetica, Arial, sans-serif;">
+                                    {{message2}}
+                                </p>
+                                {%endif%}
+                            </br>
+                            </div >
+                                <div class="sub-title">
+                                    <p>
+                                        Ready to indulge in an unforgettable dining experience? Reserve your table at Healthy Island today! 
+                                        Whether it’s a romantic dinner, a family celebration, or a business meeting, we’re here to make your moments special. 🍽️✨
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <form  novalidate action="{% url 'creat_res' %}" enctype="multipart/form-data" method="POST" class="reserv-form">
+                            {% csrf_token %}
+
+                            <div class="row">
+                                <div class="col-xs-6 sm-full">
+                                    <div class="input-box">
+                                        <input type="text" class="form-control" name="name" placeholder="Name">
+                                        <span>
+                                            <i class="fa fa-pencil"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 sm-full">
+                                    <div class="input-box">
+                                        <input type="text" class="form-control" name="phone" placeholder="Phone">
+                                        <span>
+                                            <i class="fa fa-phone"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-xs-6 sm-full">
+                                    <div class="input-box">
+                                        <input type="time" class="form-control" name="time" placeholder="Time">
+                                        
+                                    </div>
+                               
+                                </div>
+                                <div class="col-xs-6 sm-full">
+                                    <div class="input-box">
+                                        <input type="date" class="form-control" name="date" placeholder="Date">
+                                        
+                                            
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 sm-full">
+                                    <div class="input-box">
+                                        <input type="text" class="form-control" name="email" placeholder="Email">
+                                        <span>
+                                            <i class="fa fa-envelope-o"></i>
+                                        </span>
+                                    </div>
+
+                                </div>
+                                <div class="col-xs-6 sm-full">
+                                    <div class="input-box pr-40">
+                                        <select class="form-control" name="serve">
+                                            <option value="-1">Persons</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                        <span>
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <button type="submit" class="btn-submit">Book a table</button>
+                                </div>
+                            </div>
+
+                        </form>
+                        <!-- booking form  ends-->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="special-box reserv-aside">
+                            <div class="hours-box">
+                                <h3>Restaurant Hours</h3>
+
+                                <div class="row">
+                                    <!-- hours  -->
+                                    <div class="col-xs-6">
+                                        <div class="hours">
+                                            <div class="icon">
+                                                <i class="flaticon-coffee"></i>
+                                            </div>
+                                            <h4 class="hours-title">Breakfast</h4>
+                                            <p class="hours-text">9:00AM - 11:30AM</p>
+                                        </div>
+                                    </div>
+                                    <!-- hours ends  -->
+                                    <!-- hours  -->
+                                    <div class="col-xs-6">
+                                        <div class="hours">
+                                            <div class="icon">
+                                                <i class="flaticon-chicken"></i>
+                                            </div>
+                                            <h4 class="hours-title">Lunch</h4>
+                                            <p class="hours-text">11:30AM - 2:00PM</p>
+                                        </div>
+                                    </div>
+                                    <!-- hours ends  -->
+                                    <!-- hours  -->
+                                    <div class="col-xs-6">
+                                        <div class="hours">
+                                            <div class="icon">
+                                                <i class="flaticon-restaurant-4"></i>
+                                            </div>
+                                            <h4 class="hours-title">Dinner</h4>
+                                            <p class="hours-text">5:30PM - 11:00PM</p>
+                                        </div>
+                                    </div>
+                                    <!-- hours ends  -->
+                                    <!-- hours  -->
+                                    <div class="col-xs-6">
+                                        <div class="hours">
+                                            <div class="icon">
+                                                <i class="flaticon-ice-cream"></i>
+                                            </div>
+                                            <h4 class="hours-title">Dessert</h4>
+                                            <p class="hours-text">9:00AM - 11:00PM</p>
+                                        </div>
+                                    </div>
+                                    <!-- hours ends  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- reservation section -->
+        <section class="service-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2 class="main-title text-left">
+                            <span>Services</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-12">
+                                <div class="service">
+                                    <div class="icon">
+                                        <i class="flaticon-cake"></i>
+                                    </div>
+                                    <h4 class="service-title"><a href="#">Birthday Party</a></h4>
+                                    <p>
+                                        Dolor sit amet consectetuer adipiscn elit commodo ligula eget dolor. Aenean etsa massa
+                                        Cum sociis natoque.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-12">
+                                <div class="service">
+                                    <div class="icon">
+                                        <i class="flaticon-catering"></i>
+                                    </div>
+                                    <h4 class="service-title"><a href="#">Charity Events</a></h4>
+                                    <p>
+                                        Dolor sit amet consectetuer adipiscn elit commodo ligula eget dolor. Aenean etsa massa
+                                        Cum sociis natoque.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-chef-figure">
+                            <img src="{% static 'island\images/service-chef.png' %}" class="img-responsive" alt="service chef">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-12">
+                                <div class="service">
+                                    <div class="icon">
+                                        <i class="flaticon-people"></i>
+                                    </div>
+                                    <h4 class="service-title"><a href="#">Events Party</a></h4>
+                                    <p>
+                                        Dolor sit amet consectetuer adipiscn elit commodo ligula eget dolor. Aenean etsa massa
+                                        Cum sociis natoque.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-12">
+                                <div class="service">
+                                    <div class="icon">
+                                        <i class="flaticon-table"></i>
+                                    </div>
+                                    <h4 class="service-title"><a href="#">Private Dinning</a></h4>
+                                    <p>
+                                        Dolor sit amet consectetuer adipiscn elit commodo ligula eget dolor. Aenean etsa massa
+                                        Cum sociis natoque.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- service section  -->
+        <!-- testimonial section -->
+        
+        <!-- testimonial section ends -->
+        <!-- call out section  -->
+        <section class="call-out-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2>Experience the real taste of our food.</h2>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- call out section ends -->
+        <!-- footer  -->
+        <footer class="footer section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="footer-widget">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="position:relative;left:22vw;">
+                                    <h3 class="main-title footer-title text-right">
+                                        <span>
+                                            Contact Us
+                                        </span>
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="content" style="position:relative;left:25vw;width:50vw;" >
+                                <p>
+                                    <i class="fa fa-map-marker"> </i>
+                                    <span>ADDRESS :</span>Rue pologne, Bardo ,Tunisia
+                                </p>
+                                <p>
+                                    <i class="fa fa-phone"> </i>
+                                    <span>CALL US :</span>+123-456-7890, +987-654-3210
+                                </p>
+                                <p>
+                                    <i class="fa fa-envelope-o"> </i>
+                                    <span>EMAIL US :</span>taste@tastybite.com
+                                </p>
+                                <h5>Follow us on :</h5>
+                                <ul class="mini-social">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+        </footer>
+        <!-- footer ends -->
+
+        <div class="copyright">
+
+            <p>
+                © Copyright | TastyBite 2018. All Right Reserved Developed By
+                <a href="#">Chouchene Med amine</a>
+            </p>
+        </div>
+    </div>
+    <script src="{% static 'island\js/jquery.1.12.4.js' %}"></script>
+    <script src="{% static 'island\js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'island\js/plugins.js' %}"></script>
+    <script src="{% static 'island\js/main.js' %}"></script>
+</body>
+
+</html>

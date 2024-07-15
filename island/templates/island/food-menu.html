@@ -1,0 +1,480 @@
+﻿
+{% load static %}<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Healthy Island</title>
+    <meta name="description" content="">
+    <link rel="icon" href="favicon.ico" type="images/ico" sizes="16x16">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="{% static 'island\css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/lity.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css/slicknav.min.css' %}">
+    <link rel="stylesheet" href="{% static 'island\css\style.css' %}">
+    <!--[if lt IE 9]>
+    <script src=" {% static 'island\js/main.js' %}js/modernizr-3.5.0.min.js"></script>
+    <script src=" {% static 'island\js/main.js' %}https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- ====== scroll to top ====== -->
+    <a id="toTopBtn" title="Go to top" href="javascript:void(0)">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+    <!-- loader  -->
+    <div class="loader">
+        <h1>Loading...</h1>
+        <div id="cooking">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div id="area">
+                <div id="sides">
+                    <div id="pan"></div>
+                    <div id="handle"></div>
+                </div>
+                <div id="pancake">
+                    <div id="pastry"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- loader ends  -->
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="menubar">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav class="navbar navbar-static-top">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                <script>
+                    function loadGoogleTranslate() {
+                        new google.translate.TranslateElement(
+                            {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 
+                            'google_element'
+                        );
+                    }
+            
+                    // Wait for the Google Translate widget to load
+                    window.addEventListener('load', loadGoogleTranslate);
+                </script>
+        
+    <div id="google_element" style="position:relative;left:70vw;top:-2  vh">Language</div>
+                                    <a class="navbar-brand" href="{% url 'home'  %}">
+                                        <img style="height:200px;" src="{% static 'island\images/aziz.png' %}" class="img-responsive" alt="logo">
+                                    </a>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse ">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="res-btn">
+                                            <a href="{% url 'reservation'  %}" class="book-btn">Book a table</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav navbar-nav navbar-right" id="main-menu">
+                                        <li class="s">
+                                            <a href="{% url 'home'  %}">
+                                                Home
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'about'  %}">About</a>
+                                        </li>
+                                       
+                                                <li class="active">
+                                                    <a href="{% url 'menu'  %}"> menu</a>
+                                                </li>
+                                                
+
+                                           
+
+                                        
+
+
+                                    </ul>
+
+                                </div>
+                                <!-- /.navbar-collapse -->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mobile-menu" data-logo="images/logo.png">
+
+
+            </div>
+        </header>
+        <section class="page-title">
+            <div class="container">
+                <h2 class="title">
+                    Food Menu
+                </h2>
+                <ul class="brdcrumb clearfix">
+                    <li>
+                        <a href="{% url 'home'  %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about'  %}">About</a>
+                    </li>
+                    <li class="current">
+                        Food Menu
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- menu section  -->
+        <section class="food-menu-section food-bg section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2 class="main-title text-left">
+                            <span class="bg-reverse">Food Dishes</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <ul class="menus sort-foods">
+                    <li class="filter-button active" data-filter="*">
+                        <i class="flaticon-tray-1"></i>
+
+                        All
+                    </li>
+                    <li class="filter-button" data-filter=".breakfast">
+                        <i class="flaticon-coffee"></i>
+                        Breakfast
+                    </li>
+                    <li class="filter-button" data-filter=".lunch">
+
+                        <i class="flaticon-waitress"></i>
+                        Lunch
+                    </li>
+                    <li class="filter-button" data-filter=".dinner">
+
+                        <i class="flaticon-restaurant-4"></i>
+                        Dinner
+                    </li>
+
+                </ul>
+
+
+                <div class="row food-items">
+                    <!-- menu box  -->
+                     {% for plats in plat %}
+                     {% if plats.type == "Dishes" %}
+                        <div class="col-md-4 col-sm-6 col-xs-12 grid-item {{plats.time}}">
+                        <div class="menu-box">
+
+                            <a href="{% url 'details' plats.id  %}">
+                                <img src="{{plats.image1.url}}" alt="menu pic" class="featured-pic">
+                            </a>
+                            
+                            <div class="menu-title">
+                                <h5 class="title bg-secondry">
+                                    <a href="{% url 'details' plats.id  %}">{{plats.name}}</a>
+                                </h5>
+                                <span>
+                                    &nbsp; {{plats.price}} TND
+                                </span>
+                            </div>
+                            <p>{{plats.bio}}</p>
+                        </div>
+                    </div>
+                    {%endif%}
+                    {% endfor %}
+                    <!-- menu box ends  -->
+                    <!-- menu box  -->
+                   
+                    <!-- menu box ends  -->
+                    <!-- menu box  -->
+                    
+                    <!-- menu box ends  -->
+                   
+                    <!-- menu box ends  -->
+                </div>
+            </div>
+
+        </section>
+
+        <section class="chef-hero-bg chef-hero-drinks-pic section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2 class="main-title text-left">
+                            <span class="chef-hero-drinks-pic">
+                                Drinks
+                                <i class="chef-hero-drinks-pic"></i>
+                            </span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- drinks section  -->
+        <section class="food-menu-section food-drinks-bg section-padding">
+            <div class="container">
+                <ul class="menus sort-foods">
+                    <li class="filter-button active" data-filter="*">
+                        <i class="flaticon-tray-1"></i>
+
+                        All
+                    </li>
+                    <li class="filter-button" data-filter=".breakfast">
+                        <i class="flaticon-coffee"></i>
+                        Breakfast
+                    </li>
+                    <li class="filter-button" data-filter=".lunch">
+
+                        <i class="flaticon-waitress"></i>
+                        Lunch
+                    </li>
+                    <li class="filter-button" data-filter=".dinner">
+
+                        <i class="flaticon-restaurant-4"></i>
+                        Dinner
+                    </li>
+
+                </ul>
+
+
+                <div class="row food-items">
+                    <!-- menu box  -->
+                     {% for plats in plat %}
+                     {% if plats.type == "Drinks" %}
+                        <div class="col-md-4 col-sm-6 col-xs-12 grid-item {{plats.time}}">
+                        <div class="menu-box">
+
+                            <a href="{% url 'details' plats.id  %}">
+                                <img src="{{plats.image1.url}}" alt="menu pic" class="featured-pic">
+                            </a>
+                            
+                            <div class="menu-title">
+                                <h5 class="title bg-secondry">
+                                    <a href="{% url 'details' plats.id  %}">{{plats.name}}</a>
+                                </h5>
+                                <span>
+                                    &nbsp; {{plats.price}} TND
+                                </span>
+                            </div>
+                            <p>{{plats.bio}}</p>
+                        </div>
+                    </div>
+                    {%endif%}
+                    {% endfor %}
+                    <!-- menu box ends  -->
+                    <!-- menu box  -->
+                   
+                    <!-- menu box ends  -->
+                    <!-- menu box  -->
+                    
+                    <!-- menu box ends  -->
+                   
+                    <!-- menu box ends  -->
+                </div>
+            </div>
+
+        </section>
+        <!-- drinks section ends  -->
+
+        <section class="chef-hero-bg chef-hero-dessert-pic section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h2 class="main-title text-left">
+                            <span class="chef-hero-dessert-pic">
+                                Desserts
+                                <i class="chef-hero-dessert-pic"></i>
+                            </span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- dessert section  -->
+        <section class="food-menu-section food-dessert-bg section-padding">
+            <div class="container">
+                <ul class="menus sort-foods">
+                    <li class="filter-button active" data-filter="*">
+                        <i class="flaticon-tray-1"></i>
+
+                        All
+                    </li>
+                    <li class="filter-button" data-filter=".breakfast">
+                        <i class="flaticon-coffee"></i>
+                        Breakfast
+                    </li>
+                    <li class="filter-button" data-filter=".lunch">
+
+                        <i class="flaticon-waitress"></i>
+                        Lunch
+                    </li>
+                    <li class="filter-button" data-filter=".dinner">
+
+                        <i class="flaticon-restaurant-4"></i>
+                        Dinner
+                    </li>
+
+                </ul>
+
+
+                <div class="row food-items">
+                    <!-- menu box  -->
+                     {% for plats in plat %}
+                     {% if plats.type == "Desserts" %}
+                        <div class="col-md-4 col-sm-6 col-xs-12 grid-item {{plats.time}}">
+                        <div class="menu-box">
+
+                            <a href="{% url 'details' plats.id  %}">
+                                <img src="{{plats.image1.url}}" alt="menu pic" class="featured-pic">
+                            </a>
+                            
+                            <div class="menu-title">
+                                <h5 class="title bg-secondry">
+                                    <a href="{% url 'details' plats.id  %}">{{plats.name}}</a>
+                                </h5>
+                                <span>
+                                    &nbsp; {{plats.price}} TND
+                                </span>
+                            </div>
+                            <p>{{plats.bio}}</p>
+                        </div>
+                    </div>
+                    {%endif%}
+                    {% endfor %}
+                    <!-- menu box ends  -->
+                    <!-- menu box  -->
+                   
+                    <!-- menu box ends  -->
+                    <!-- menu box  -->
+                    
+                    <!-- menu box ends  -->
+                   
+                    <!-- menu box ends  -->
+                </div>
+            </div>
+
+        </section>
+        <!-- dessert section ends  -->
+        <!-- call out section  -->
+        <section class="call-out-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2>Experience the real taste of our food.</h2>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="call-out-btn">
+                            <a href="contact.html" class="btn-custom">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- call out section ends -->
+        <!-- footer  -->
+        <footer class="footer section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="footer-widget">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12" style="position:relative;left:22vw;">
+                                    <h3 class="main-title footer-title text-right">
+                                        <span>
+                                            Contact Us
+                                        </span>
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="content" style="position:relative;left:25vw;width:50vw;" >
+                                <p>
+                                    <i class="fa fa-map-marker"> </i>
+                                    <span>ADDRESS :</span>Rue pologne, Bardo ,Tunisia
+                                </p>
+                                <p>
+                                    <i class="fa fa-phone"> </i>
+                                    <span>CALL US :</span>+123-456-7890, +987-654-3210
+                                </p>
+                                <p>
+                                    <i class="fa fa-envelope-o"> </i>
+                                    <span>EMAIL US :</span>taste@tastybite.com
+                                </p>
+                                <h5>Follow us on :</h5>
+                                <ul class="mini-social">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+        </footer>
+        <!-- footer ends -->
+
+        <div class="copyright">
+
+            <p>
+                © Copyright | TastyBite 2018. All Right Reserved Developed By
+                <a href="#">Chouchene Med amine</a>
+            </p>
+        </div>
+    </div>
+    <script src=" {% static 'island\js/jquery.1.12.4.js' %}"></script>
+    <script src="{% static 'island\js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'island\js/plugins.js' %}"></script>
+    <script src="{% static 'island\js/main.js' %}"></script>
+</body>
+
+</html>
